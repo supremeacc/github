@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA 6 Photo Prompts · TechBabe</title>
+<meta name="description" content="5 copy-paste ChatGPT prompts to turn your selfie into a GTA 6 style artwork.">
+<meta property="og:title" content="GTA 6 Photo Prompts">
+<meta property="og:description" content="Upload a selfie to ChatGPT, paste a prompt, get your GTA 6 artwork.">
+<meta property="og:image" content="car.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Yellowtail&family=Inter:wght@400;500;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0E0E10; --ink2:#18181c; --pink:#FF3D8B; --gold:#FFC83D; --cream:#F6EFE4; --money:#7DBE6C;
+  --soft:#b9b3aa; --line:#2b2b31;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font-family:Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 40px}
+
+/* ---------- HUD bar ---------- */
+.hud{display:flex;justify-content:space-between;align-items:center;padding:16px 0 0;font-family:Bungee,sans-serif}
+.hud .stars{color:var(--gold);font-size:20px;letter-spacing:4px;-webkit-text-stroke:1.5px var(--ink);text-shadow:2px 2px 0 var(--pink)}
+.hud .cash{color:var(--money);font-size:20px;-webkit-text-stroke:1.5px var(--ink);text-shadow:2px 2px 0 #000}
+
+/* ---------- hero: flat striped sunset + palm silhouettes ---------- */
+.hero{position:relative;margin-top:14px;border-radius:26px;overflow:hidden;border:3px solid var(--cream);box-shadow:8px 8px 0 var(--pink);background:#1b1420;min-height:560px;isolation:isolate}
+.sun{position:absolute;left:50%;bottom:70px;width:280px;height:280px;margin-left:-140px;border-radius:50%;background:repeating-linear-gradient(180deg,var(--gold) 0 26px,var(--pink) 26px 30px);z-index:-2;opacity:.95}
+.sun::after{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-linear-gradient(180deg,transparent 0 120px,#1b1420 120px 126px,transparent 126px 160px,#1b1420 160px 170px,transparent 170px 200px,#1b1420 200px 214px,transparent 214px)}
+.sea{position:absolute;left:0;right:0;bottom:0;height:110px;background:repeating-linear-gradient(180deg,#24182b 0 10px,#2d1d35 10px 14px);z-index:-1}
+.palm{position:absolute;bottom:100px;fill:#0b0b0d;z-index:-1}
+.palm.l{left:-40px;width:230px}.palm.r{right:-50px;width:260px;transform:scaleX(-1)}
+@media(max-width:560px){.palm.l{width:170px;left:-50px}.palm.r{width:190px;right:-60px}}
+.hero-in{position:relative;padding:30px 22px 250px;text-align:center}
+.kicker{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;background:var(--ink);border:2px solid var(--cream);padding:6px 12px;border-radius:99px}
+h1{margin-top:18px;font-family:Bungee,sans-serif;font-weight:400;font-size:clamp(46px,13vw,92px);line-height:.9;color:#fff;-webkit-text-stroke:3px var(--ink);paint-order:stroke fill;text-shadow:5px 6px 0 var(--ink)}
+h1 .six{color:var(--pink)}
+.script{display:block;margin-top:6px;font-family:Yellowtail,cursive;font-size:clamp(40px,10vw,64px);color:var(--gold);-webkit-text-stroke:2px var(--ink);paint-order:stroke fill;text-shadow:3px 4px 0 var(--ink);transform:rotate(-4deg)}
+.lede{margin:18px auto 0;max-width:32ch;font-size:16.5px;line-height:1.45;color:#fff;background:rgba(14,14,16,.7);border-radius:14px;padding:10px 14px}
+
+/* ---------- section heads ---------- */
+.sec{display:flex;align-items:center;gap:12px;margin:46px 0 18px}
+.sec h2{font-family:Bungee,sans-serif;font-weight:400;font-size:26px;color:#fff;-webkit-text-stroke:1.5px var(--ink)}
+.sec i{flex:1;height:3px;background:repeating-linear-gradient(90deg,var(--gold) 0 14px,transparent 14px 22px)}
+
+/* ---------- steps ---------- */
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.step{background:var(--ink2);border:2px solid var(--line);border-radius:20px;padding:18px}
+.step b{display:inline-grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--gold);color:var(--ink);font-family:Bungee;font-size:18px;border:2px solid var(--ink);box-shadow:3px 3px 0 var(--pink)}
+.step h3{margin-top:12px;font-size:19px;font-weight:800}
+.step p{margin-top:6px;color:var(--soft);font-size:15px;line-height:1.45}
+.btn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;font:800 15px Inter,sans-serif;color:var(--ink);background:var(--pink);border:2px solid var(--ink);border-radius:12px;padding:11px 16px;text-decoration:none;box-shadow:4px 4px 0 #000;cursor:pointer;transition:transform .12s, box-shadow .12s}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 #000}
+.btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 #000}
+.btn.gold{background:var(--gold)}
+@media(max-width:560px){.steps{grid-template-columns:1fr}}
+
+/* ---------- mission cards ---------- */
+.mission{position:relative;margin-bottom:26px;background:var(--ink2);border:3px solid var(--cream);border-radius:22px;overflow:hidden;box-shadow:7px 7px 0 var(--pink)}
+.mission:nth-child(even){box-shadow:7px 7px 0 var(--gold)}
+.shot{position:relative;aspect-ratio:16/10;overflow:hidden;background:#221a28;border-bottom:3px solid var(--cream)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:50% 30%;display:block;transition:transform .5s}
+.mission:hover .shot img{transform:scale(1.04)}
+.tag{position:absolute;left:14px;top:14px;font-family:Bungee;font-size:15px;background:var(--ink);color:var(--gold);border:2px solid var(--gold);border-radius:10px;padding:6px 10px}
+.made{position:absolute;right:14px;bottom:14px;font:700 11px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase;background:rgba(14,14,16,.85);color:#fff;border-radius:99px;padding:5px 10px}
+.art{position:absolute;inset:0;display:grid;place-items:center}
+.body{padding:18px 18px 20px}
+.body h3{font-family:Bungee,sans-serif;font-weight:400;font-size:clamp(22px,5.4vw,30px);line-height:1.05;color:#fff}
+.body h3 small{display:block;margin-top:4px;font-family:Yellowtail,cursive;font-size:26px;color:var(--pink)}
+.prompt{position:relative;margin-top:14px;background:#0b0b0d;border:2px dashed #3a3a42;border-radius:14px;padding:14px 14px 14px;font:500 14.5px/1.6 "JetBrains Mono",monospace;color:#e9e3d9;max-height:132px;overflow:hidden;transition:max-height .35s}
+.prompt.open{max-height:900px}
+.prompt:not(.open)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:46px;background:linear-gradient(transparent,#0b0b0d)}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.more{font:700 13px Inter;color:var(--soft);background:none;border:none;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.copied{background:var(--money)!important}
+
+/* ---------- copy all ---------- */
+.all{margin-top:6px;display:flex;justify-content:center}
+
+/* ---------- follow block (same as the job sites page) ---------- */
+.follow{margin-top:56px;position:relative;background:var(--cream);color:var(--ink);border-radius:26px;padding:24px 22px 0;overflow:hidden;display:grid;grid-template-columns:1fr 150px;gap:6px;align-items:end;border:3px solid var(--ink);box-shadow:8px 8px 0 var(--pink)}
+.follow h2{font-family:Bungee;font-weight:400;font-size:28px;line-height:1}
+.follow h2 span{font-family:Yellowtail,cursive;font-size:36px;color:var(--pink)}
+.follow p{margin:10px 0 16px;color:#4a4540;font-size:15px}
+.socials{display:grid;gap:10px;padding-bottom:22px}
+.soc{display:flex;align-items:center;gap:12px;text-decoration:none;background:var(--ink);color:#fff;border-radius:14px;padding:10px 14px;transition:transform .15s}
+.soc:hover{transform:translateX(4px)}
+.soc .ico{display:grid;place-items:center;width:36px;height:36px}
+.soc .who{flex:1;display:grid}
+.soc small{font:500 10px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;opacity:.65}
+.soc b{font-weight:800;font-size:16px}
+.char{width:150px;height:auto;display:block;margin-bottom:0}
+@media(max-width:430px){.follow{grid-template-columns:1fr}.char{width:150px;justify-self:center;order:-1;margin-top:-4px}}
+
+footer{margin-top:40px;text-align:center}
+footer .cta{font-family:Yellowtail,cursive;font-size:34px;color:var(--gold)}
+footer p{margin-top:8px;font:500 12px "JetBrains Mono",monospace;color:var(--soft);letter-spacing:.04em;line-height:1.6}
+
+.toast{white-space:nowrap;position:fixed;left:50%;bottom:24px;transform:translate(-50%,120px);background:var(--gold);color:var(--ink);font-family:Bungee;padding:12px 22px;border-radius:12px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--pink);transition:transform .3s cubic-bezier(.3,1.4,.5,1);z-index:9}
+.toast.on{transform:translate(-50%,0)}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="hud" aria-hidden="true"><span class="stars">★★★★★</span><span class="cash">₹00000000</span></div>
+
+  <header class="hero">
+    <div class="sun"></div>
+    <svg class="palm l" viewBox="0 0 200 320" aria-hidden="true"><path d="M104 320 C100 250 96 190 100 120 L108 120 C106 190 112 250 118 320 Z"/><path d="M104 122 C70 86 26 88 0 124 C30 104 66 108 102 130 Z"/><path d="M104 122 C122 74 166 60 200 76 C162 72 128 92 106 130 Z"/><path d="M104 120 C86 62 52 34 8 34 C54 48 84 82 102 128 Z"/><path d="M104 120 C132 92 174 100 200 138 C168 112 132 108 106 128 Z"/><path d="M104 120 C108 70 130 36 170 16 C138 44 116 78 108 126 Z"/><path d="M104 120 C92 96 60 110 40 150 C70 120 92 116 104 126 Z"/></svg>
+    <svg class="palm r" viewBox="0 0 200 320" aria-hidden="true"><path d="M104 320 C100 250 96 190 100 120 L108 120 C106 190 112 250 118 320 Z"/><path d="M104 122 C70 86 26 88 0 124 C30 104 66 108 102 130 Z"/><path d="M104 122 C122 74 166 60 200 76 C162 72 128 92 106 130 Z"/><path d="M104 120 C86 62 52 34 8 34 C54 48 84 82 102 128 Z"/><path d="M104 120 C132 92 174 100 200 138 C168 112 132 108 106 128 Z"/><path d="M104 120 C108 70 130 36 170 16 C138 44 116 78 108 126 Z"/><path d="M104 120 C92 96 60 110 40 150 C70 120 92 116 104 126 Z"/></svg>
+    <div class="sea"></div>
+    <div class="hero-in">
+      <span class="kicker">5 copy-paste prompts</span>
+      <h1>GTA <span class="six">6</span><br>photos</h1>
+      <span class="script">with ChatGPT</span>
+      <p class="lede">Upload one clear selfie, paste a prompt, and get your own Vice City artwork.</p>
+    </div>
+  </header>
+
+  <div class="sec"><h2>How it works</h2><i></i></div>
+  <div class="steps">
+    <div class="step"><b>1</b><h3>Open ChatGPT</h3><p>Log in so you can upload a photo.</p><a class="btn" href="https://chatgpt.com" target="_blank" rel="noopener">Open chatgpt.com ↗</a></div>
+    <div class="step"><b>2</b><h3>Selfie + prompt</h3><p>Upload a clear, front-facing selfie, then copy any prompt below and paste it in the same message.</p></div>
+  </div>
+
+  <div class="sec"><h2>Pick a mission</h2><i></i></div>
+  <div id="missions"></div>
+  <div class="all"><button class="btn gold" id="copyAll">Copy all 5 prompts</button></div>
+
+  <section class="follow">
+    <div>
+      <h2>Mission complete? <span>tag me!</span></h2>
+      <p>Post your GTA photo and tag me. I share simple, useful tech every week.</p>
+      <div class="socials">
+        <a class="soc" href="https://www.instagram.com/techbabecodes" target="_blank" rel="noopener" aria-label="Instagram @techbabecodes"><span class="ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></span><span class="who"><small>Instagram</small><b>@techbabecodes</b></span><span aria-hidden="true">↗</span></a>
+        <a class="soc" href="https://www.instagram.com/techbabetalks" target="_blank" rel="noopener" aria-label="Instagram @techbabetalks"><span class="ico"><svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg></span><span class="who"><small>Instagram</small><b>@techbabetalks</b></span><span aria-hidden="true">↗</span></a>
+        <a class="soc" href="https://youtube.com/@techbabecodes" target="_blank" rel="noopener" aria-label="YouTube @techbabecodes"><span class="ico"><svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8z"/><path fill="#0E0E10" d="M9.6 15.6V8.4l6.2 3.6z"/></svg></span><span class="who"><small>YouTube</small><b>@techbabecodes</b></span><span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <img class="char" src="techbabe-character.webp" alt="TechBabe cartoon character" width="150" height="170">
+  </section>
+
+  <footer>
+    <div class="cta">See you in Vice City 🌴</div>
+    <p>Fan-made prompts for fun. Not affiliated with Rockstar Games or OpenAI.<br>Results change every time, so try a prompt twice if the face doesn't match.</p>
+  </footer>
+</div>
+<div class="toast" id="toast">Copied!</div>
+
+<script>
+const MISSIONS=[
+  {t:"The Muscle Car Pose",s:"GTA 6 cover vibe",img:"car.webp",
+   p:"Transform the person in this photo into a GTA 6 official artwork illustration style. They are leaning casually on the hood of a retro pink-and-purple muscle car parked on a Miami Vice City beach boulevard at sunset. Palm trees, neon signs, ocean in the background, vibrant pastel orange and magenta sky, bold GTA 6 logo in the top corner. Keep the exact facial features and hairstyle of the person in the uploaded photo."},
+  {t:"Standing Between Lucia & Jason",s:"the trio poster",img:"trio.webp",
+   p:"Create a GTA 6 promotional poster style illustration featuring the person from the uploaded photo standing confidently in the center, right between Lucia and Jason. All three are dressed in stylish Miami street fashion, standing in front of a sports car with Vice City palm trees, neon lights, and a glowing sunset sky behind them. High-contrast Rockstar Games comic-realism art style, keeping the uploaded person's exact face."},
+  {t:"Solo Vice City Loading Screen",s:"night portrait",img:"poster.webp",
+   p:"Turn the person in this photo into a GTA 6 loading screen character portrait. Stylized semi-realistic Rockstar Games illustration, wearing cool sunglasses and streetwear, standing on a neon-lit Vice City street at night with supercars and palm trees blurred in the background. Dramatic pink and cyan rim lighting, sharp ink outlines, exact likeness of the uploaded face."},
+  {t:"Miami Yacht Boss",s:"billionaire vibe",img:"yacht.webp",pos:"50% 35%",
+   p:"Illustrate the person in this photo in GTA 6 official artwork style, relaxing on the deck of a luxury yacht in Vice City during golden hour. Wearing a stylish tropical open shirt and aviator sunglasses, with the glowing Miami skyline, speedboats, and helicopters in the distant sunset sky. Crisp Rockstar Games cel-shaded realism, preserving the exact face of the uploaded photo."},
+  {t:"5-Star Wanted Chase",s:"full action",img:"chase.webp",pos:"40% 35%",
+   p:"Turn the person in this photo into a high-action GTA 6 artwork scene. They are smirking confidently while driving a convertible sports car at high speed down a neon-lit Miami highway, with flashing red-and-blue police cruisers chasing behind them and a 5-star wanted level icon in the top right corner. Bold comic-realism Rockstar Games style, keeping the exact facial likeness of the uploaded person."},
+];
+// simple flat art for the two prompts without a sample photo
+const ART={
+  yacht:`<svg viewBox="0 0 320 200" width="78%" aria-hidden="true"><circle cx="160" cy="92" r="58" fill="#FFC83D"/><g fill="#221a28"><rect x="96" y="70" width="128" height="6"/><rect x="96" y="92" width="128" height="7"/><rect x="96" y="114" width="128" height="8"/></g><path d="M40 150 H280 L252 176 H66 Z" fill="#F6EFE4" stroke="#0E0E10" stroke-width="5" stroke-linejoin="round"/><path d="M96 150 V126 H210 L232 150 Z" fill="#F6EFE4" stroke="#0E0E10" stroke-width="5" stroke-linejoin="round"/><rect x="112" y="132" width="22" height="10" fill="#FF3D8B"/><rect x="142" y="132" width="22" height="10" fill="#FF3D8B"/><rect x="172" y="132" width="22" height="10" fill="#FF3D8B"/><path d="M0 186 Q40 178 80 186 T160 186 T240 186 T320 186 V200 H0Z" fill="#2d1d35"/></svg>`,
+  wanted:`<svg viewBox="0 0 320 200" width="82%" aria-hidden="true">${[0,1,2,3,4].map(i=>`<path transform="translate(${28+i*56} 70) scale(1.3)" d="M20 0 L25 14 L40 14 L28 23 L33 38 L20 29 L7 38 L12 23 L0 14 L15 14 Z" fill="#FFC83D" stroke="#0E0E10" stroke-width="3" stroke-linejoin="round"/>`).join('')}<rect x="40" y="148" width="120" height="16" rx="8" fill="#FF3D8B"/><rect x="160" y="148" width="120" height="16" rx="8" fill="#F6EFE4"/></svg>`
+};
+const box=document.getElementById('missions');
+MISSIONS.forEach((m,i)=>{
+  const n=String(i+1).padStart(2,'0');
+  const el=document.createElement('article');el.className='mission';
+  el.innerHTML=`<div class="shot">${m.img?`<img src="${m.img}" alt="Example result: ${m.t}" style="object-position:${m.pos||'50% 30%'}"><span class="made">made with this prompt</span>`:`<div class="art">${ART[m.art]}</div>`}<span class="tag">Mission ${n}</span></div>
+  <div class="body"><h3>${m.t}<small>${m.s}</small></h3>
+  <div class="prompt" id="p${i}">${m.p}</div>
+  <div class="row"><button class="btn" data-i="${i}">Copy prompt</button><button class="more" data-m="${i}">Read full prompt</button></div></div>`;
+  box.appendChild(el);
+});
+const toast=document.getElementById('toast');let tm;
+function say(m){toast.textContent=m;toast.classList.add('on');clearTimeout(tm);tm=setTimeout(()=>toast.classList.remove('on'),1600)}
+function copy(text,msg,btn){(navigator.clipboard?navigator.clipboard.writeText(text):Promise.reject()).then(done).catch(()=>{const t=document.createElement('textarea');t.value=text;document.body.appendChild(t);t.select();try{document.execCommand('copy');done()}catch(e){say('Copy failed')}t.remove()});
+  function done(){say(msg);if(btn){const o=btn.textContent;btn.textContent='Copied ✓';btn.classList.add('copied');setTimeout(()=>{btn.textContent=o;btn.classList.remove('copied')},1500)}}}
+box.addEventListener('click',e=>{
+  const b=e.target.closest('[data-i]');if(b){copy(MISSIONS[b.dataset.i].p,'Prompt copied!',b);return}
+  const m=e.target.closest('[data-m]');if(m){const p=document.getElementById('p'+m.dataset.m);p.classList.toggle('open');m.textContent=p.classList.contains('open')?'Show less':'Read full prompt'}
+});
+document.getElementById('copyAll').addEventListener('click',e=>copy(MISSIONS.map((m,i)=>`${i+1}. ${m.t}\n${m.p}`).join('\n\n'),'All 5 copied!',e.currentTarget));
+</script>
+</body>
+</html>
